@@ -6,4 +6,9 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+# Where you tell Cargo which external crates your project depends on and which versions of those crates you require.
+# Run "cargo build" to download dependencies from the registry
+# "Cargo.lock" file to preserve dependency versions across time for reproducible builds
+    # i.e. rand library won't automatically update unless explicitly told to
 [dependencies]
+rand = "0.6.0" # Rand library "crate", which is a collection of Rust source code files
