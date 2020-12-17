@@ -46,7 +46,7 @@ fn main() {
 
         // Need to convert guess to an integer so the compiler doesn't throw a type mismatch error in the cmp function below (because secret_number is an int!)
         // Rust allows us to SHADOW the previous value of guess with a new one
-        // Most often used when converting a value from one type to another
+        // Most often used when converting a value from one type to another, because you can't change the original variable's type once you declare it.
         // .trim() removes newline from read_line
         // .parse() method parses a string into a number
         // Need to tell Rust to convert it to a u32 int type (since there are several number types)
