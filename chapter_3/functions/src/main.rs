@@ -198,6 +198,83 @@
 // ----------------------------------------------------------------------------------
 
 // Problem 2: Generate the nth Fibonacci number
+// ----------------------------------------------------------------------------------
+// use std::io;
+// use std::io::Write; // for flushing print! output
+// // f(n) = f(n-1) + f(n-2)
+// // f(0) = 0
+// // f(1) = 1
+// // TODO/ FIXME: Optimize this solution using MEMOIZATION (i.e. closures)
+//     // Optimization technique via storing the results of expensive function calls and returning the cached result when the same inputs occur again
+// fn generate_fibonacci(n :u64) -> u64 {
+//     if n < 2 {
+//         n
+//     }else{
+//         generate_fibonacci(n - 1) + generate_fibonacci(n - 2)
+//     }
+// }
+
+// fn main(){
+//     loop {
+//         let mut input = String::new();
+//         // stdout is frequently line-buffered by default, so may need to flush buffer to emit output immediately
+//         print!("Please enter an integer N to generate the Nth Fibonacci Number: ");
+//         io::stdout().flush().unwrap();
+//         io::stdin().read_line(&mut input).expect("Failed to read line");
+//         let input :u64 = match input.trim().parse() {
+//             Ok(n) => n,
+//             Err(_) => {
+//                 println!("Please enter a number!");
+//                 continue;
+//             }
+//         };
+//         let fibonacci_number = generate_fibonacci(input); // regular recursive function
+//         println!("The {}(th/nd) Fibonacci number is {}", input, fibonacci_number);
+//     }
+// }
+// ----------------------------------------------------------------------------------
 
 
 // Problem 3: Print the lyrics to the Christmas carol “The Twelve Days of Christmas,” taking advantage of the repetition in the song.
+// ----------------------------------------------------------------------------------
+// use std::io;
+// use std::thread;
+// use std::io::Write; 
+
+// fn main(){
+//     let days_of_xmas = [
+//         "a partridge in a pear tree",
+//         "two turtle doves",
+//         "three french hens",
+//         "four calling birds",
+//         "five golden rings",
+//         "six geese a-laying",
+//         "seven swans a-swimming",
+//         "eight maids a-milking",
+//         "nine ladies dancing",
+//         "ten lords a-leaping",
+//         "eleven pipers piping",
+//         "twelve drummers drumming"
+//     ];
+
+//     for (day, present) in days_of_xmas.iter().enumerate(){
+//         print!("On the ");
+//         if day == 0 {
+//             print!("1st");
+//         } else if day == 1 {
+//             print!("2nd");
+//         } else if day == 2 {
+//             print!("3rd");
+//         } else {
+//             let middleman = (day + 1).to_string();
+//             print!("{}th", middleman);
+//         }
+
+//         print!(" day of christmas my true love gave to me, ");
+//         io::stdout().flush().unwrap(); // dump content to stdout and pause
+//         thread::sleep_ms(3000);
+//         println!("{}!", present); // then print the present
+//         thread::sleep_ms(4000);
+//     }
+// }
+// ----------------------------------------------------------------------------------
